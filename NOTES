@@ -1,12 +1,14 @@
+# VirtualBox NAT setup
+# ====================
 
-VirtualBox NAT setup
-====================
+#
+# Use these commands to map VirtualBox ports to ports on the host
+#
 VBoxManage modifyvm Agent --natpf1 "guestssh,tcp,,2222,,22"
-VBoxManage modifyvm Agent --natpf1 "web8080,tcp,,9080,,8080"
+VBoxManage modifyvm Agent --natpf1 "web8080,tcp,,7080,,80"
 
-VBoxManage sharedfolder add "Agent" --name "shared" --hostpath "/Users/tim/Desktop/SHARED"
-
-
-every agent boot should remove  /var/lib/mongodb/mongod.lock
-
+#
+# Use this to forward host port 80 to port 7080 (the VirtualBox port)
+#
+sudo ssh tim@localhost -L 80::7080
 
