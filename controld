@@ -1,0 +1,5 @@
+#!/bin/sh
+
+export GOPATH=/home/control/go
+
+go run control.go 

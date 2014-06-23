@@ -1,0 +1,12 @@
+
+VirtualBox NAT setup
+====================
+VBoxManage modifyvm Agent --natpf1 "guestssh,tcp,,2222,,22"
+VBoxManage modifyvm Agent --natpf1 "web8080,tcp,,9080,,8080"
+
+VBoxManage sharedfolder add "Agent" --name "shared" --hostpath "/Users/tim/Desktop/SHARED"
+
+
+every agent boot should remove  /var/lib/mongodb/mongod.lock
+
+
