@@ -19,6 +19,7 @@ apt-get install golang -y
 apt-get install git -y
 apt-get install bzr -y
 apt-get install mercurial -y
+apt-get install docker -y
 
 #
 # Part 2: Third-party Agent I/O components
