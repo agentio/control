@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	"labix.org/v2/mgo"
+	"gopkg.in/mgo.v2"
 )
 
 func getMongoSession() (mongoSession *mgo.Session) {
